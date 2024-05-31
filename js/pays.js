@@ -60,7 +60,7 @@
                     contenu = contenu.split(" ").slice(0, 50).join(" ") + "...";
 
                     let carte = document.createElement("div");
-                    carte.classList.add("restapi__carte");
+                    carte.classList.add("pays__carte");
                     carte.classList.add("carte");
 
                     let image;
@@ -69,12 +69,14 @@
                     }
 
                     carte.innerHTML = `
-                    <img src="${image}" alt="${titre}">
                     <a href="${lien}">
-                        <h4>${titre}</h4> 
+                    <h4>${titre}</h4> 
                     </a>
                     <ul class="post-categories"></ul>
+                    <div class="pays__contenu">
+                    <img src="${image}" alt="${titre}">
                     <p>${contenu}</p>
+                    </div>
                     `;
 
                     conteneut__pays.appendChild(carte);

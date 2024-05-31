@@ -1,0 +1,21 @@
+.pays__carte {
+    & h4 {
+        margin-bottom: 0;
+    }
+    & ul {
+        margin-top: 0.5rem;
+    }
+}
+
+.pays__contenu {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    & img {
+        width: 150px;
+        height: 150px;
+    }
+    & p {
+        margin-left: 1.5rem;
+    }
+}

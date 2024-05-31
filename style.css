@@ -1,1 +1,19 @@
-/*# sourceMappingURL=style.css.map */
+.pays__carte h4 {
+  margin-bottom: 0;
+}
+.pays__carte ul {
+  margin-top: 0.5rem;
+}
+
+.pays__contenu {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.pays__contenu img {
+  width: 150px;
+  height: 150px;
+}
+.pays__contenu p {
+  margin-left: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
