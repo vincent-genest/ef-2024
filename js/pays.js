@@ -52,28 +52,16 @@
 
                     let categories = article.categories;
                     let liens_cat = `https://gftnth00.mywhc.ca/tim41/category/${categories}`;
-                    // peux tu faire le liens vers les catégories
-
-                    // console.log(categories);
-                    if (article.meta && article.meta.ville_avoisinante) {
-                        // console.log("Ville : ", article.meta.ville_avoisinante);
-                    } else {
-                        // console.log(meta);
-                    }
 
                     let lien = article.link;
 
                     let contenu = article.content.rendered;
-                    // Coupé contenu après 10 mots
-                    let mots = contenu.split(" ");
-                    contenu = mots.slice(0, 10).join(" ") + "...";
+                    // afficher les 50 premiers mots
+                    contenu = contenu.split(" ").slice(0, 50).join(" ") + "...";
 
                     let carte = document.createElement("div");
                     carte.classList.add("restapi__carte");
                     carte.classList.add("carte");
-
-                    // console.log(article._embedded);
-                    // console.log(article._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
 
                     let image;
                     if (article._embedded["wp:featuredmedia"]) {
@@ -82,10 +70,11 @@
 
                     carte.innerHTML = `
                     <img src="${image}" alt="${titre}">
-                    <h4>${titre}</h4>
+                    <a href="${lien}">
+                        <h4>${titre}</h4> 
+                    </a>
                     <ul class="post-categories"></ul>
                     <p>${contenu}</p>
-                    <a href="${lien}">Voir plus</a>
                     `;
 
                     conteneut__pays.appendChild(carte);
@@ -96,7 +85,6 @@
                         let elm_cat = document.createElement("li");
                         let nom_cat = article._embedded["wp:term"][0][cat_actuelle].name;
                         cat_actuelle++;
-                        // console.log(cat);
                         elm_cat.innerHTML = `<a href="https://gftnth00.mywhc.ca/tim41/category/${cat}">${nom_cat}</a>`;
                         liste[liste.length - 1].appendChild(elm_cat);
                     });
