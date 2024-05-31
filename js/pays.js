@@ -66,6 +66,8 @@
                     let image;
                     if (article._embedded["wp:featuredmedia"]) {
                         image = article._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+                    } else {
+                        image = "https://via.placeholder.com/150";
                     }
 
                     carte.innerHTML = `
