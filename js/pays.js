@@ -20,6 +20,13 @@
         });
     }
 
+    //À la base, on sélectionne le bouton france
+    url = `https://gftnth00.mywhc.ca/tim41/wp-json/wp/v2/posts?search=france&_fields=link,title,featured_media,_links,_embedded,content,categories,terms&_embed
+    `;
+    fetchUrl(url);
+    let bouton__france = document.getElementById("France");
+    bouton__france.classList.add("bouton__pays__actif");
+
     // Effectuer la requête HTTP en utilisant fetch()
     function fetchUrl(url) {
         fetch(url)
