@@ -1,5 +1,4 @@
 (function () {
-    console.log("rest API");
     // URL de l'API REST de WordPress
     let bouton__pays = document.querySelectorAll(".bouton__pays");
     let url;
@@ -89,7 +88,7 @@
                     <a href="${lien}">Voir plus</a>
                     `;
 
-                    restapi.appendChild(carte);
+                    conteneut__pays.appendChild(carte);
 
                     let cat_actuelle = 0;
                     categories.forEach((cat) => {
