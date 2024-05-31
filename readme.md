@@ -14,7 +14,7 @@ Le plugin rest API est conçu pour créer des boutons envoyant une requête pour
 
 -   Boutons stylisés
 -   Renvoie l'image, le titre, le contenu, la liste des catégories et le lien d'une destination
--   Créer pour ressembler aux cartes de la page d'acceuil
+-   Créer pour ressembler aux cartes du devis
 
 ## Installation
 
@@ -25,8 +25,8 @@ Le plugin rest API est conçu pour créer des boutons envoyant une requête pour
 
 ## Utilisation
 
-1. Accédez à la section "Voyage" dans votre tableau de bord WordPress
-2. Insérez le shortcode `[em_destination]` dans les pages ou articles où vous souhaitez afficher le carrousel
+1. Accédez à la section "Pays" dans votre tableau de bord WordPress
+2. Insérez le shortcode `[em_pays]` où vous voulez voir apparaitre la liste des boutons et les cartes
 
 ### Liens supplémentaires :
 
