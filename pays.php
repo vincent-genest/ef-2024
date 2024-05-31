@@ -35,11 +35,11 @@ add_action('wp_enqueue_scripts', 'ec_pays_enqueue');
 /* Création de la liste des destinations en HTML */
 function creation_pays(){
     $pays = array("France","États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse");
-    $contenu = ' <div class="contenu__categories categories__type">';
+    $contenu = ' <div class="contenu__boutons__pays">';
     foreach ($pays as $pays) {
         $contenu .= '<button id="'. $pays. '"class="bouton__pays">' . $pays . '</button>';
     }
-    $contenu .= '
+    $contenu .= '</div>
     <div class="contenu__pays"></div>';
     return $contenu;
 }
